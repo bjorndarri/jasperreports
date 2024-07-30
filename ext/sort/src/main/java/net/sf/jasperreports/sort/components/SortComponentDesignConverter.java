@@ -21,40 +21,46 @@
  * You should have received a copy of the GNU Lesser General Public License
  * along with JasperReports. If not, see <http://www.gnu.org/licenses/>.
  */
-package net.sf.jasperreports.components.sort;
+package net.sf.jasperreports.sort.components;
 
-import java.util.Collections;
-import java.util.List;
-
-import net.sf.jasperreports.engine.JRException;
-import net.sf.jasperreports.engine.ParameterContributor;
-import net.sf.jasperreports.engine.ParameterContributorContext;
-import net.sf.jasperreports.engine.ParameterContributorFactory;
+import net.sf.jasperreports.engine.JRComponentElement;
+import net.sf.jasperreports.engine.JRElement;
+import net.sf.jasperreports.engine.JRPrintElement;
+import net.sf.jasperreports.engine.component.ComponentDesignConverter;
+import net.sf.jasperreports.engine.convert.ElementIconConverter;
+import net.sf.jasperreports.engine.convert.ReportConverter;
+import net.sf.jasperreports.engine.util.JRImageLoader;
 
 /**
- * @author Teodor Danciu (teodord@users.sourceforge.net)
+ * @author Narcis Marcu (narcism@users.sourceforge.net)
  */
-public final class SortParameterContributorFactory implements ParameterContributorFactory
+public class SortComponentDesignConverter extends ElementIconConverter implements ComponentDesignConverter
 {
 
-	private static final SortParameterContributorFactory INSTANCE = new SortParameterContributorFactory();
-	
-	private SortParameterContributorFactory()
-	{
-	}
+	/**
+	 *
+	 */
+	private final static SortComponentDesignConverter INSTANCE = new SortComponentDesignConverter();
 	
 	/**
-	 * 
+	 *
 	 */
-	public static SortParameterContributorFactory getInstance()
+	private SortComponentDesignConverter()
+	{
+		super(JRImageLoader.SUBREPORT_IMAGE_RESOURCE);
+	}
+
+	/**
+	 *
+	 */
+	public static SortComponentDesignConverter getInstance()
 	{
 		return INSTANCE;
 	}
 
 	@Override
-	public List<ParameterContributor> getContributors(ParameterContributorContext context) throws JRException
+	public JRPrintElement convert(ReportConverter reportConverter, JRComponentElement element)
 	{
-		return Collections.<ParameterContributor>singletonList(new SortParameterContributor(context));
+		return convert(reportConverter, (JRElement)element);
 	}
-	
 }

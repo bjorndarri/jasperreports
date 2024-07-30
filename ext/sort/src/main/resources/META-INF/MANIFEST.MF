@@ -3,14 +3,14 @@ Built-By: ${project.organization.name}
 Specification-Title: ${project.name}
 Specification-Version: ${project.version}
 Specification-Vendor: ${project.organization.name}
-Implementation-Title: net.sf.jasperreports.components.sort
+Implementation-Title: net.sf.jasperreports.sort.components
 Implementation-Version: ${project.version}-${buildNumber}
 Implementation-Vendor: ${project.organization.name}
 Bundle-ManifestVersion: 2
 Bundle-Name: ${project.name}
 Bundle-Version: ${project.version}
 Bundle-Vendor: ${project.organization.name}
-Bundle-SymbolicName: net.sf.jasperreports.components.sort
+Bundle-SymbolicName: net.sf.jasperreports.sort.components
 Bundle-ClassPath: .
-Export-Package: net.sf.jasperreports.components.sort
+Export-Package: net.sf.jasperreports.sort.components
 DynamicImport-Package: *

@@ -21,34 +21,33 @@
  * You should have received a copy of the GNU Lesser General Public License
  * along with JasperReports. If not, see <http://www.gnu.org/licenses/>.
  */
-package net.sf.jasperreports.components.sort;
+package net.sf.jasperreports.sort.components;
 
+import net.sf.jasperreports.engine.JRExpressionCollector;
+import net.sf.jasperreports.engine.base.JRBaseObjectFactory;
 import net.sf.jasperreports.engine.component.Component;
-import net.sf.jasperreports.engine.component.ComponentFillFactory;
-import net.sf.jasperreports.engine.component.FillComponent;
-import net.sf.jasperreports.engine.fill.JRFillCloneFactory;
-import net.sf.jasperreports.engine.fill.JRFillObjectFactory;
+import net.sf.jasperreports.engine.component.ComponentCompiler;
+import net.sf.jasperreports.engine.design.JRVerifier;
 
 /**
  * @author Narcis Marcu (narcism@users.sourceforge.net)
  */
-public class SortComponentFillFactory implements ComponentFillFactory
-{
+public class SortComponentCompiler implements ComponentCompiler {
 
 	@Override
-	public FillComponent toFillComponent(Component component,
-			JRFillObjectFactory factory)
-	{
+	public void collectExpressions(Component component, JRExpressionCollector collector) {
+	}
+	
+	@Override
+	public Component toCompiledComponent(Component component,
+			JRBaseObjectFactory baseFactory) {
 		SortComponent sortComponent = (SortComponent) component;
-		return new SortComponentFill(sortComponent);
+		return new SortComponent(sortComponent, baseFactory);
 	}
 
 	@Override
-	public FillComponent cloneFillComponent(FillComponent component,
-			JRFillCloneFactory factory)
-	{
-		SortComponentFill sortComponentFill = (SortComponentFill) component;
-		return new SortComponentFill(sortComponentFill.getSortComponent());
+	public void verify(Component component, JRVerifier verifier) {
+		// TODO
 	}
-
+	
 }

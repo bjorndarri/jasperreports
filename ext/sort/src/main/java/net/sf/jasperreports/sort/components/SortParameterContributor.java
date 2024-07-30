@@ -21,12 +21,13 @@
  * You should have received a copy of the GNU Lesser General Public License
  * along with JasperReports. If not, see <http://www.gnu.org/licenses/>.
  */
-package net.sf.jasperreports.components.sort;
+package net.sf.jasperreports.sort.components;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import net.sf.jasperreports.components.sort.FieldFilter;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
