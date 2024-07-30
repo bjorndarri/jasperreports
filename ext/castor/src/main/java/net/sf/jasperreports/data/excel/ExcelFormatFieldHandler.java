@@ -23,6 +23,7 @@
  */
 package net.sf.jasperreports.data.excel;
 
+import net.sf.jasperreports.adapters.data.excel.ExcelFormatEnum;
 import org.exolab.castor.mapping.GeneralizedFieldHandler;
 
 

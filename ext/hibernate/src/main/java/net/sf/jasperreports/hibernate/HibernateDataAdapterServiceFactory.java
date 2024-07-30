@@ -23,11 +23,11 @@
  */
 package net.sf.jasperreports.hibernate;
 
-import net.sf.jasperreports.data.hibernate.HibernateDataAdapter;
-import net.sf.jasperreports.data.hibernate.spring.SpringHibernateDataAdapter;
-import net.sf.jasperreports.dataadapters.DataAdapter;
-import net.sf.jasperreports.dataadapters.DataAdapterContributorFactory;
-import net.sf.jasperreports.dataadapters.DataAdapterService;
+import net.sf.jasperreports.adapters.data.hibernate.HibernateDataAdapter;
+import net.sf.jasperreports.adapters.data.hibernate.spring.SpringHibernateDataAdapter;
+import net.sf.jasperreports.adapters.data.DataAdapter;
+import net.sf.jasperreports.adapters.data.DataAdapterContributorFactory;
+import net.sf.jasperreports.adapters.data.DataAdapterService;
 import net.sf.jasperreports.engine.ParameterContributorContext;
 
 

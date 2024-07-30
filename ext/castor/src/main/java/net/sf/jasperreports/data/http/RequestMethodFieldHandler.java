@@ -25,7 +25,7 @@ package net.sf.jasperreports.data.http;
 
 import org.exolab.castor.mapping.GeneralizedFieldHandler;
 
-import net.sf.jasperreports.dataadapters.http.RequestMethod;
+import net.sf.jasperreports.adapters.data.http.RequestMethod;
 
 
 /**

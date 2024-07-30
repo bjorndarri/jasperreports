@@ -23,6 +23,7 @@
  */
 package net.sf.jasperreports.data.json;
 
+import net.sf.jasperreports.adapters.data.json.JsonExpressionLanguageEnum;
 import org.exolab.castor.mapping.GeneralizedFieldHandler;
 
 /**

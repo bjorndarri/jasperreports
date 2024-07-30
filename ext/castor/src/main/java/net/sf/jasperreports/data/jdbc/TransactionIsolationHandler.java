@@ -23,6 +23,7 @@
  */
 package net.sf.jasperreports.data.jdbc;
 
+import net.sf.jasperreports.adapters.data.jdbc.TransactionIsolation;
 import org.exolab.castor.mapping.GeneralizedFieldHandler;
 
 

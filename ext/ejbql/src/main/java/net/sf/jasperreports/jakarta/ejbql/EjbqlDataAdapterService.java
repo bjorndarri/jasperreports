@@ -30,8 +30,8 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
 import jakarta.persistence.Persistence;
-import net.sf.jasperreports.data.ejbql.EjbqlDataAdapter;
-import net.sf.jasperreports.dataadapters.AbstractDataAdapterService;
+import net.sf.jasperreports.adapters.data.ejbql.EjbqlDataAdapter;
+import net.sf.jasperreports.adapters.data.AbstractDataAdapterService;
 import net.sf.jasperreports.engine.JRException;
 import net.sf.jasperreports.engine.ParameterContributorContext;
 import net.sf.jasperreports.engine.query.EjbqlConstants;

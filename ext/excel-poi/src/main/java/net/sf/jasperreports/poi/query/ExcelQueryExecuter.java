@@ -37,7 +37,7 @@ import org.apache.commons.logging.LogFactory;
 
 import net.sf.jasperreports.annotations.properties.Property;
 import net.sf.jasperreports.annotations.properties.PropertyScope;
-import net.sf.jasperreports.data.excel.ExcelFormatEnum;
+import net.sf.jasperreports.adapters.data.excel.ExcelFormatEnum;
 import net.sf.jasperreports.engine.DefaultJasperReportsContext;
 import net.sf.jasperreports.engine.JRDataSource;
 import net.sf.jasperreports.engine.JRDataset;

@@ -26,9 +26,9 @@ package net.sf.jasperreports.poi.data;
 import java.io.IOException;
 import java.util.Map;
 
-import net.sf.jasperreports.data.excel.ExcelFormatEnum;
-import net.sf.jasperreports.data.xls.AbstractXlsDataAdapterService;
-import net.sf.jasperreports.data.xls.XlsDataAdapter;
+import net.sf.jasperreports.adapters.data.excel.ExcelFormatEnum;
+import net.sf.jasperreports.adapters.data.xls.AbstractXlsDataAdapterService;
+import net.sf.jasperreports.adapters.data.xls.XlsDataAdapter;
 import net.sf.jasperreports.engine.JRException;
 import net.sf.jasperreports.engine.ParameterContributorContext;
 import net.sf.jasperreports.engine.data.AbstractXlsDataSource;

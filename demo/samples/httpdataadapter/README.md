@@ -26,9 +26,9 @@ How to fill a report using data from an HTTP request returning XML or JSON file.
 
 ### Accessing Data over HTTP
 
-An HTTP data adapter is a data file-based data adapter that uses an [HttpDataLocation](https://jasperreports.sourceforge.net/api/net/sf/jasperreports/dataadapters/http/HttpDataLocation.html) object, in order to gain access to remote data over HTTP and retrieve content that can be mapped to a custom (usually JSONQL or XML) data source.
+An HTTP data adapter is a data file-based data adapter that uses an [HttpDataLocation](https://jasperreports.sourceforge.net/api/net/sf/jasperreports/adapters/data/http/HttpDataLocation.html) object, in order to gain access to remote data over HTTP and retrieve content that can be mapped to a custom (usually JSONQL or XML) data source.
 
-[DataFile](https://jasperreports.sourceforge.net/api/net/sf/jasperreports/dataadapters/DataFile.html)-based adapters (such as [JsonDataAdapter](https://jasperreports.sourceforge.net/api/net/sf/jasperreports/data/json/JsonDataAdapter.html) or [XmlDataAdapter](https://jasperreports.sourceforge.net/api/net/sf/jasperreports/data/xml/XmlDataAdapter.html)) can be converted into HTTP data adapters by declaring their [DataFile](https://jasperreports.sourceforge.net/api/net/sf/jasperreports/dataadapters/DataFile.html) element of type [HttpDataLocation](https://jasperreports.sourceforge.net/api/net/sf/jasperreports/dataadapters/http/HttpDataLocation.html):
+[DataFile](https://jasperreports.sourceforge.net/api/net/sf/jasperreports/adapters/data/DataFile.html)-based adapters (such as [JsonDataAdapter](https://jasperreports.sourceforge.net/api/net/sf/jasperreports/data/json/JsonDataAdapter.html) or [XmlDataAdapter](https://jasperreports.sourceforge.net/api/net/sf/jasperreports/data/xml/XmlDataAdapter.html)) can be converted into HTTP data adapters by declaring their [DataFile](https://jasperreports.sourceforge.net/api/net/sf/jasperreports/adapters/data/DataFile.html) element of type [HttpDataLocation](https://jasperreports.sourceforge.net/api/net/sf/jasperreports/adapters/data/http/HttpDataLocation.html):
 
 ```
 <jsonDataAdapter class="net.sf.jasperreports.data.json.JsonDataAdapterImpl">
@@ -52,9 +52,9 @@ or
 </xmlDataAdapter>
 ```
 
-The [HttpDataLocation](https://jasperreports.sourceforge.net/api/net/sf/jasperreports/dataadapters/http/HttpDataLocation.html) object encapsulates the following information, related to a given HTTP request:
+The [HttpDataLocation](https://jasperreports.sourceforge.net/api/net/sf/jasperreports/adapters/data/http/HttpDataLocation.html) object encapsulates the following information, related to a given HTTP request:
 
-- `method` - the request method name, which may be one of the following (see [RequestMethod](https://jasperreports.sourceforge.net/api/net/sf/jasperreports/dataadapters/http/RequestMethod.html)):
+- `method` - the request method name, which may be one of the following (see [RequestMethod](https://jasperreports.sourceforge.net/api/net/sf/jasperreports/adapters/data/http/RequestMethod.html)):
     - `GET`
     - `POST`
     - `PUT`
@@ -89,19 +89,19 @@ The following predefined parameter properties let us configure the HTTP request,
     - is specified per dataset or at report parameter level
     - if declared per dataset, its value is mandatory and represents the base URL used by the HTTP data adapter
     - if declared at report parameter level, it needs no value and is used to mark the report parameter as URL provider for the HTTP request
-    - overrides the deprecated parameter [PARAMETER_URL](https://jasperreports.sourceforge.net/api/net/sf/jasperreports/dataadapters/http/HttpDataService.html#PARAMETER_URL)
+    - overrides the deprecated parameter [PARAMETER_URL](https://jasperreports.sourceforge.net/api/net/sf/jasperreports/adapters/data/http/HttpDataService.html#PARAMETER_URL)
     - if this property is specified in various report parameters, only the last one of them will be considered as the URL provider
 3. [net.sf.jasperreports.http.data.username](https://jasperreports.sourceforge.net/config.reference.html#net.sf.jasperreports.http.data.username)
     - is specified per dataset or at report parameter level
     - if declared per dataset, its value is mandatory and represents the user name to be used in HTTP data adapters with basic authentication.
     - if declared at report parameter level, it needs no value and is used to mark the report parameter as user name provider for the HTTP request
-    - overrides the deprecated parameter [PARAMETER_USERNAME](https://jasperreports.sourceforge.net/api/net/sf/jasperreports/dataadapters/http/HttpDataService.html#PARAMETER_USERNAME)
+    - overrides the deprecated parameter [PARAMETER_USERNAME](https://jasperreports.sourceforge.net/api/net/sf/jasperreports/adapters/data/http/HttpDataService.html#PARAMETER_USERNAME)
     - if this property is specified in various report parameters, only the last one of them will be considered as the user name provider
 4. [net.sf.jasperreports.http.data.password](https://jasperreports.sourceforge.net/config.reference.html#net.sf.jasperreports.http.data.password)
     - is specified per dataset or at report parameter level
     - if declared per dataset, its value is mandatory and represents the user password to be used in HTTP data adapters with basic authentication.
     - if declared at report parameter level, it needs no value and is used to mark the report parameter as user password provider for the HTTP request
-    - overrides the deprecated parameter [PARAMETER__PASSWORD](https://jasperreports.sourceforge.net/api/net/sf/jasperreports/dataadapters/http/HttpDataService.html#PARAMETER_PASSWORD)
+    - overrides the deprecated parameter [PARAMETER__PASSWORD](https://jasperreports.sourceforge.net/api/net/sf/jasperreports/adapters/data/http/HttpDataService.html#PARAMETER_PASSWORD)
     - if this property is specified in various report parameters, only the last one of them will be considered as the user password provider
 5. [net.sf.jasperreports.http.data.body](https://jasperreports.sourceforge.net/config.reference.html#net.sf.jasperreports.http.data.body)
     - is specified per dataset or at report parameter level
@@ -113,13 +113,13 @@ The following predefined parameter properties let us configure the HTTP request,
     - is specified at report parameter level
     - if the property has no value, it will be used to mark the report parameter as URL parameter to be appended to the base URL of the HTTP request; the URL parameter will have the same name and value as the report parameter
     - if the property has a given value, its value will be used as name for the related URL parameter; the value of the URL parameter will be the same as the report parameter value
-    - overrides the deprecated parameter prefix [PARAMETER_PREFIX_URL_PARAMETER](https://jasperreports.sourceforge.net/api/net/sf/jasperreports/dataadapters/http/HttpDataService.html#PARAMETER_PREFIX_URL_PARAMETER)
+    - overrides the deprecated parameter prefix [PARAMETER_PREFIX_URL_PARAMETER](https://jasperreports.sourceforge.net/api/net/sf/jasperreports/adapters/data/http/HttpDataService.html#PARAMETER_PREFIX_URL_PARAMETER)
     - if this property is specified in various report parameters, the related URL parameter will be considered as parameter of type array, being sent multiple times
 7. [net.sf.jasperreports.http.data.post.parameter](https://jasperreports.sourceforge.net/config.reference.html#net.sf.jasperreports.http.data.post.parameter)
     - is specified at report parameter level
     - if the property has no value, it will be used to mark the report parameter as HTTP request `POST` parameter; the `POST` parameter will have the same name and value as the report parameter
     - if the property has a given value, its value will be used as name for the related request `POST` parameter; the value of the POST parameter will be the same as the report parameter value
-    - overrides the deprecated parameter prefix [PARAMETER_PREFIX_POST_PARAMETER](https://jasperreports.sourceforge.net/api/net/sf/jasperreports/dataadapters/http/HttpDataService.html#PARAMETER_PREFIX_POST_PARAMETER)
+    - overrides the deprecated parameter prefix [PARAMETER_PREFIX_POST_PARAMETER](https://jasperreports.sourceforge.net/api/net/sf/jasperreports/adapters/data/http/HttpDataService.html#PARAMETER_PREFIX_POST_PARAMETER)
     - if this property is specified in various report parameters, the related `POST` parameter will be considered as parameter of type array, being sent multiple times
     - `POST` parameters will be ignored by the `GET` method
     - `POST` parameters will be ignored if a request `body` is provided
@@ -131,9 +131,9 @@ The following predefined parameter properties let us configure the HTTP request,
 
 ### HTTP Data Service
 
-The information stored in the [HttpDataLocation](https://jasperreports.sourceforge.net/api/net/sf/jasperreports/dataadapters/http/HttpDataLocation.html) object is collected and processed by the [HttpDataService](url)https://jasperreports.sourceforge.net/api/net/sf/jasperreports/dataadapters/http/HttpDataService.html API, which builds a client object to send a specific request over HTTP.
+The information stored in the [HttpDataLocation](https://jasperreports.sourceforge.net/api/net/sf/jasperreports/adapters/data/http/HttpDataLocation.html) object is collected and processed by the [HttpDataService](url)https://jasperreports.sourceforge.net/api/net/sf/jasperreports/adapters/data/http/HttpDataService.html API, which builds a client object to send a specific request over HTTP.
 
-As a result, a data file connection is obtained in the form of an [HttpDataConnection](https://jasperreports.sourceforge.net/api/net/sf/jasperreports/dataadapters/http/HttpDataConnection.html) object.
+As a result, a data file connection is obtained in the form of an [HttpDataConnection](https://jasperreports.sourceforge.net/api/net/sf/jasperreports/adapters/data/http/HttpDataConnection.html) object.
 
 This object comes with an [InputStream](https://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html) that can be extracted and interpreted as custom data source (usually in JSON or XML format), using the available public methods of the class:
 

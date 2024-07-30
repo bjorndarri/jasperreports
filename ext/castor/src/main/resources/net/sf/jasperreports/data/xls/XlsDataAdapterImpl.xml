@@ -2,7 +2,7 @@
 <!DOCTYPE mapping PUBLIC "-//EXOLAB/Castor Mapping DTD Version 1.0//EN" "http://castor.org/mapping.dtd">
 
 <mapping>
-	<class name="net.sf.jasperreports.data.xls.XlsDataAdapterImpl">
+	<class name="net.sf.jasperreports.adapters.data.xls.XlsDataAdapterImpl">
 		<map-to xml="xlsDataAdapter"/>
 		<field name="class" type="java.lang.Class" handler="net.sf.jasperreports.data.ClassNameFieldHandler">
 			<bind-xml name="class" node="attribute"/>
@@ -13,7 +13,7 @@
 		<field name="fileName" type="string" handler="net.sf.jasperreports.util.NoWriteFieldHandler">
 			<bind-xml name="fileName" node="element"/>
 		</field>
-		<field name="dataFile" type="net.sf.jasperreports.data.DataFile">
+		<field name="dataFile" type="net.sf.jasperreports.adapters.data.DataFile">
 			<bind-xml name="dataFile" node="element"/>
 		</field> 
 		<field name="useFirstRowAsHeader" type="boolean">

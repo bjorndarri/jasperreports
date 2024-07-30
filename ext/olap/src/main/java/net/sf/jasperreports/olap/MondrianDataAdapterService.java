@@ -29,8 +29,8 @@ import java.util.Map;
 import mondrian.olap.Connection;
 import mondrian.olap.DriverManager;
 import mondrian.olap.Util;
-import net.sf.jasperreports.data.jdbc.JdbcDataAdapterService;
-import net.sf.jasperreports.data.mondrian.MondrianDataAdapter;
+import net.sf.jasperreports.adapters.data.jdbc.JdbcDataAdapterService;
+import net.sf.jasperreports.adapters.data.mondrian.MondrianDataAdapter;
 import net.sf.jasperreports.engine.JRException;
 import net.sf.jasperreports.engine.ParameterContributorContext;
 

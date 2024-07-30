@@ -32,7 +32,7 @@ import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-import net.sf.jasperreports.data.excel.ExcelFormatEnum;
+import net.sf.jasperreports.adapters.data.excel.ExcelFormatEnum;
 import net.sf.jasperreports.engine.JRException;
 import net.sf.jasperreports.engine.JasperReportsContext;
 import net.sf.jasperreports.engine.util.Pair;
